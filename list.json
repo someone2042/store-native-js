@@ -75,5 +75,12 @@
         "price": 15.99,
         "img": ["photo/19.jpg","photo/20.jpg"],
         "info": "No info"
+    },
+    {
+        "id":12 ,
+        "titre": "sky",
+        "price": 15.99,
+        "img": ["photo/19.jpg","photo/20.jpg"],
+        "info": "No info"
     }
 ]

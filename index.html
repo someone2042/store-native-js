@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="index.js"></script>
+    <link rel="shortcut icon" href="icons8-shopping-cart-24.png">
+    <link rel="stylesheet" href="index.css">
+    <title>store</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="icons8-shopping-cart-24.png" alt="shoping cart" class="icon">
+            <p class="number">0</p>
+        </div>
+    </div>
+    <div class="shop" id="shop">
+    </div>
+    <script type="module">
+        import { show,showless } from "./index.js";
+        window.show = show;
+        window.showless = showless;
+    </script>
+</body>
+</html>

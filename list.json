@@ -1,0 +1,79 @@
+[
+    {
+        "id":1 ,
+        "titre": "car",
+        "price": 24999,
+        "img": ["photo/11.png","photo/5.jpg"],
+        "info": "No info"
+    },
+    {
+        "id": 2,
+        "titre": "moon",
+        "price": 39.99,
+        "img": ["photo/1.jpg","photo/7.jpg","photo/12.jpg","photo/21.jpg"],
+        "info": "No info"
+    },
+    {
+        "id":3 ,
+        "titre": "space ship",
+        "price": 149.99,
+        "img": ["photo/2.jpg","photo/14.jpg"],
+        "info": "No info"
+    },
+    {
+        "id":4 ,
+        "titre": "bench",
+        "price": 29.99,
+        "img": ["photo/3.jpg"],
+        "info": "No info"
+    },
+    {
+        "id":5 ,
+        "titre": "alien X" ,
+        "price": 999999,
+        "img": ["photo/4.jpg"],
+        "info": "No info"
+    },
+    {
+        "id":6 ,
+        "titre": "shirt",
+        "price": 9.99,
+        "img": ["photo/6.jpg","photo/13.png"],
+        "info": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié."
+    },
+    {
+        "id":7 ,
+        "titre": "art",
+        "price": 30.99,
+        "img": ["photo/18.jpg"],
+        "info": "No info"
+    },
+    {
+        "id":8 ,
+        "titre": "jacket",
+        "price": 59.99,
+        "img": ["photo/8.jpg","photo/9.png"],
+        "info": "No info"
+    },
+    {
+        "id":9 ,
+        "titre": "tringle",
+        "price": 5.99,
+        "img": ["photo/10.png"],
+        "info": "No info"
+    },
+    {
+        "id":10 ,
+        "titre": "halowen",
+        "price": 10.99,
+        "img": ["photo/15.jpg"],
+        "info": "No info"
+    },
+    {
+        "id":11 ,
+        "titre": "sky",
+        "price": 15.99,
+        "img": ["photo/19.jpg","photo/20.jpg"],
+        "info": "No info"
+    }
+]

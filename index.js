@@ -22,7 +22,7 @@ export function show(i)
     }
     for(let j=0;j<users[i].img.length;j++)
     {
-        radio+='<img src="'+users[i].img[j]+'" alt=""></img>'
+        radio+='<img onclick="change('+i+','+j+')" src="'+users[i].img[j]+'" alt=""></img>'
     }
     let div = document.getElementById(i);
     let a = document.createElement("div")
@@ -41,4 +41,9 @@ export function showless(i)
     let div = document.getElementById(i+'a');
     div.parentNode.removeChild(div);
     timeoutID = setTimeout(()=>{div.setAttribute('onclick','show('+i+');');document.getElementById(i).scrollIntoView()}, 3);
+}
+export function change(i,j)
+{
+    let img = document.getElementById(i+"a").firstChild.firstChild.firstChild
+    img.src=users[i].img[j];
 }

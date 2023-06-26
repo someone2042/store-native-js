@@ -122,10 +122,10 @@ button:hover{
     position: fixed;
     display: flex;
     background-color: #bbb;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin: 30px; */
     height: fit-content;
     transition: all .3s ease-out;
+    
 }
 .fade-in{
     opacity: 0;

@@ -1,6 +1,7 @@
 import users from './list.json' assert{type: 'json'};
 
 const shop = document.getElementById("shop");
+let shoplist = new Array();
 
 for(let i=0;i<users.length;i++)
 {
@@ -40,10 +41,36 @@ export function showless(i)
 {
     let div = document.getElementById(i+'a');
     div.parentNode.removeChild(div);
-    timeoutID = setTimeout(()=>{div.setAttribute('onclick','show('+i+');');document.getElementById(i).scrollIntoView()}, 3);
+    let timeoutID = setTimeout(()=>{div.setAttribute('onclick','show('+i+');');document.getElementById(i).scrollIntoView()}, 3);
 }
 export function change(i,j)
 {
     let img = document.getElementById(i+"a").firstChild.firstChild.firstChild
     img.src=users[i].img[j];
+}
+export function add(j)
+{
+    console.log(shoplist)
+    let pos=-1
+    for(let i=0;i<shoplist.length;i++)
+    {
+        if(shoplist[i].id==j)
+        {
+            pos=i;
+            break;
+        }
+    }
+    if(pos==-1)
+    {
+        let k=
+        {
+            id:j,
+            number:1
+        };
+        shoplist.push(k);
+    }
+    else
+    {
+        shoplist[pos].number++;
+    }
 }

@@ -16,6 +16,10 @@ for(let i=0;i<users.length;i++)
 export function show(i)
 {
     let radio='';
+    if(document.querySelector(".showpro")!=(null||undefined))
+    {
+        document.querySelector(".showpro").remove()
+    }
     for(let j=0;j<users[i].img.length;j++)
     {
         radio+='<img src="'+users[i].img[j]+'" alt=""></img>'
@@ -31,14 +35,10 @@ export function show(i)
         a.classList.remove("fade-in");
         a.classList.add("fade-out");
       }, 2);
-    // let timeoutID = setTimeout(()=>{document.getElementById(i).scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});}, 10);
 }
 export function showless(i)
 {
     let div = document.getElementById(i+'a');
     div.parentNode.removeChild(div);
-    // div.innerHTML='<div class="image"><img src="'+users[i].img[0]+'" alt=""></div><div class="info"><p>'+users[i].titre+'</p><p>$'+users[i].price+'</p></div>';
-    // div.setAttribute('class','prod');
-    // div.setAttribute('id',i);
-    // let timeoutID = setTimeout(()=>{div.setAttribute('onclick','show('+i+');');document.getElementById(i).scrollIntoView()}, 3);
+    timeoutID = setTimeout(()=>{div.setAttribute('onclick','show('+i+');');document.getElementById(i).scrollIntoView()}, 3);
 }

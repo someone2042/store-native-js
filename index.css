@@ -119,12 +119,22 @@ button:hover{
 }
 .showpro{
     width: 100%;
+    position: fixed;
     display: flex;
     background-color: #bbb;
     margin-top: 30px;
     margin-bottom: 30px;
     height: fit-content;
-    transition: all .5s ease-out;
+    transition: all .3s ease-out;
+}
+.fade-in{
+    opacity: 0;
+    scale: .7;
+    translate: 0 50%;
+}
+.fade-out{
+    
+    opacity: 1;
 }
 
 .more_info {

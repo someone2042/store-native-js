@@ -157,11 +157,14 @@ button:hover{
     position: relative;
     margin-bottom: 0;
     cursor: pointer;
-    font-size: medium;
+    font-size: large;
+    transition: all .2s ease-out;
 }
 .more_info h5:hover{
-    color: rgb(15, 15, 87);
+    color: rgb(6, 6, 102);
     text-decoration: underline;
+    letter-spacing: 1px;
+    font-size: larger;
 }
 .photo{
     height: 80%;

@@ -51,6 +51,7 @@ body,html{
     flex-direction: row;
     justify-content: center;
     flex-flow: wrap;
+    transition: all .3s ease-out;
 }
 
 .prod{
@@ -93,6 +94,7 @@ img{
     padding: 5px;
     border-radius: 5px;
     background-color: #bbb;
+    margin-bottom: 15px;
 }
 .info p{
     font-family: sans-serif;
@@ -118,8 +120,12 @@ button:hover{
     color: #FFF;
 }
 .showpro{
-    width: 100%;
+    max-width: 900px;
+    min-width: 600px;
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     background-color: #bbb;
     /* margin: 30px; */
@@ -132,15 +138,19 @@ button:hover{
     scale: .7;
     translate: 0 50%;
 }
+
+.face-out{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
 .fade-out{
-    
+    box-shadow: 0 0 100px 100px #00000020;
     opacity: 1;
 }
 
 .more_info {
     padding: 15px;
-    height: fit-content;
-    max-width: 70%;
+    width: 50%;
 }
 .more_info h5{
     position: relative;
@@ -160,16 +170,17 @@ button:hover{
     place-items: center;
     margin-top: 20px;
     margin-left: 20px;
-    max-height: 400px;
+    /* max-height: 400px; */
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px;
-    aspect-ratio: 2/3 ;    
+    
+   
 }
 .imageshow{
     aspect-ratio: 1/1 ;    
-    width: 80%;
-    max-height: 200px;
+    width: 100%;
+    max-height: 80%;
 }
 @media only screen and (min-width: 1100px) {
     .prod{

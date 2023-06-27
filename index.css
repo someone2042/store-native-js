@@ -2,6 +2,24 @@ body,html{
     padding: 0;
     margin: 0;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #ddd;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+  }
 
 .navbar{
     width: 100%;
@@ -102,7 +120,7 @@ img{
     font-weight: 600;
     margin: 10px;
 }
-button{
+.button{
     padding: 10px;
     margin: 16px;
     border: none;
@@ -113,7 +131,7 @@ button{
     width: 100px;
     font-weight: 700;
 }
-button:hover{
+.button:hover{
     scale: 1.2;
     box-shadow: 1px 10px 20px #00000057;
     background-color: rgb(21, 15, 10);
@@ -186,6 +204,63 @@ button:hover{
     width: 100%;
     max-height: 80%;
 }
+.cart{
+    position: fixed;
+    width: 90%;
+    max-width: 430px;
+    top: 49px;
+    display: grid;
+    place-items: center;
+    overflow-y: scroll;
+    right: 0px;
+    background-color: #EEE;
+    z-index: 10;
+    border-radius: 0px 0px 0px 10px;
+    max-height: 90%;
+    box-shadow: -15px 15px 20px #00000060;
+    gap: 10px;
+}
+.prod_cart{
+    background: hsl(209, 32%, 86%);
+    width: 80%;
+    border-radius: 7px;
+    border: solid hsl(240, 30%, 70%) 2px;
+    display: grid;
+    place-items: center;
+}
+.cart_info{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cart_info button{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    font-size: x-large;
+    transition: all .2s ease-out;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 2px #fff;
+    color: #fff;
+}
+.cart_info button:hover{
+    scale: 1.2;
+    box-shadow: 0 10px 10px #0000004b;
+}
+.price_confige{
+    display: flex;
+}
+.total{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+}
+
 @media only screen and (min-width: 1100px) {
     .prod{
         width: 20%;

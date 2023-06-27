@@ -32,7 +32,7 @@ export function show(i)
     }
     let div = document.getElementById(i);
     let a = document.createElement("div")
-    a.innerHTML='<div class="photo"><div class="imageshow"><img src="'+users[i].img[0]+'" alt=""></div><div class="radio">'+radio+'</div></div><div class="more_info"><p>'+users[i].titre+'</p><p>'+users[i].info+'</p><h2>$ '+users[i].price+'</h2><center><button onclick="add('+i+')">Add to Cart</button></center><center><h5 onclick="showless('+i+')">show less</h5></center></div>'
+    a.innerHTML='<div class="photo"><div class="imageshow"><img src="'+users[i].img[0]+'" alt=""></div><div class="radio">'+radio+'</div></div><div class="more_info"><p>'+users[i].titre+'</p><p>'+users[i].info+'</p><h2>$ '+users[i].price+'</h2><center><button class=".button" onclick="add('+i+')">Add to Cart</button></center><center><h5 onclick="showless('+i+')">show less</h5></center></div>'
     a.setAttribute('class','showpro');
     a.classList.add("fade-in");
     div.parentNode.parentNode.appendChild(a);

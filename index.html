@@ -13,13 +13,16 @@
     <div class="navbar">
         <div class="logo" onclick="cart();">
             <img  src="icons8-shopping-cart-24.png" alt="shoping cart" class="icon">
-            <p class="number">0</p>
+            <p class="number" id="number">0</p>
         </div>
     </div>
-    <div class="cart" id="cart">
+    <div class="cart hide_cart" id="cart">
 
         <div class="total">
-            <p> total: 00.00$</p>
+            <p id="total"> total:   00.00$</p>
+        </div>
+        <div class="empty" id="empty">
+            <p>cart is empty</p>
         </div>
     </div>
     <div class="shop" id="shop">

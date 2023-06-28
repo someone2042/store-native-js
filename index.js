@@ -7,12 +7,12 @@ function check()
 {
     if(cart_apear)
     {
-        document.getElementById("cart").classList.add("show_cart");
+        document.getElementById("cart").classList.remove("hide_cart");
         document.getElementById("shop").classList.add("face-out");
     }
     else
     {
-        document.getElementById("cart").classList.remove("show_cart");
+        document.getElementById("cart").classList.add("hide_cart");
         document.getElementById("shop").classList.remove("face-out");
     }
 }
@@ -66,7 +66,6 @@ export function change(i,j)
 export function add(j)
 {
     let pos=-1
-    console.log(shoplist)
     for(let i=0;i<shoplist.length;i++)
     {
         // if(shoplist[i]==undefined){break;}
@@ -111,11 +110,23 @@ export function add(j)
     {
 
         shoplist[pos].number++;
-        document.getElementById(shoplist[pos].id+"shop").innerText=shoplist[pos].number;
+        document.getElementById(shoplist[pos].id+"shop").innerText="("+shoplist[pos].number+")";
     }
+    document.getElementById("number").style.display="grid"
+    document.getElementById("empty").style.display="none"
+    document.getElementById("number").innerText=shoplist.length;
+    total();
 }
 export function cart()
 {
+    if(shoplist.length==0)
+    {
+        document.getElementById("cart").style.display="block"
+    }
+    else
+    {
+        document.getElementById("cart").style.display="grid"
+    }
     
     if(!cart_apear)
     {
@@ -152,6 +163,26 @@ export function move(i,k)
             delete shoplist[pos];
             shoplist.length--;
             document.getElementById(i+"shop").parentNode.parentNode.parentNode.remove();
+            document.getElementById("number").innerText=shoplist.length;
         }
     }
+    if(shoplist.length==0)
+    {
+        document.getElementById("cart").style.display="block"
+        document.getElementById("number").style.display="none"
+        document.getElementById("empty").style.display="grid"
+    }
+    total();
+}
+function total()
+{
+    let some=0.00;
+    if (!shoplist.length==0)
+    {
+        for(let i=0;i<shoplist.length;i++)
+        {
+            some+=shoplist[i].number*users[shoplist[i].id].price;
+        }
+    }
+    document.getElementById("total").innerText="total:   "+some.toFixed(2)+"$";
 }

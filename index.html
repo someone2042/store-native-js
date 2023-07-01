@@ -8,8 +8,20 @@
     <link rel="shortcut icon" href="icons8-shopping-cart-24.png">
     <link rel="stylesheet" href="index.css">
     <title>store</title>
+    <script>
+        window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+    </script>
 </head>
 <body>
+    <div class="loader"></div>
     <div class="navbar">
         <div class="logo" onclick="cart();">
             <img  src="icons8-shopping-cart-24.png" alt="shoping cart" class="icon">

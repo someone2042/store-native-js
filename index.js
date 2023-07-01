@@ -1,5 +1,4 @@
 import users from './list.json' assert{type: 'json'};
-
 const shop = document.getElementById("shop");
 let shoplist = new Array();
 let cart_apear=false;
@@ -160,7 +159,7 @@ export function move(i,k)
         document.getElementById(i+"shop").innerText="("+shoplist[pos].number+")";
         if(shoplist[pos].number==0)
         {
-            delete shoplist[pos];
+            shoplist[pos]=shoplist[shoplist.length-1];
             shoplist.length--;
             document.getElementById(i+"shop").parentNode.parentNode.parentNode.remove();
             document.getElementById("number").innerText=shoplist.length;
